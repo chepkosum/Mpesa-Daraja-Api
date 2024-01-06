@@ -11,7 +11,7 @@ $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 //ENCRYPT DATA TO GET PASSWORD
 $password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
-$phone = '254745083558';
+$phone = '254726620050';
 $money = '1';
 $PartyA = $phone;
 $partyB = '254708374149';
@@ -45,4 +45,22 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
 $curl_response = curl_exec($curl);
 
 //ECHO THE RESPONSE
-echo $curl_response;
+// echo $curl_response;
+$data = json_decode($curl_response);
+$CheckoutRequestID = $data->CheckoutRequestID;
+$ResponseCode = $data->ResponseCode;
+if($ResponseCode =="0"){
+echo "The CheckoutRequestID for this transaction is: ".$CheckoutRequestID;
+}
+// if (isset($data->ResponseCode)) {
+//     $ResponseCode = $data->ResponseCode;
+//     if($ResponseCode == '0'){
+//         $message = "The transaction is successfully";
+//     }elseif($ResponseCode == '1'){
+//         $message = "The balance is insufficient for the transaction";
+//     }elseif($ResponseCode == '1032'){
+//         $message = "The transaction has been cancelled by user";
+//     }elseif($ResponseCode == '1037'){
+//         $message = "Timeout in completing the transaction";
+//     }
+// }
