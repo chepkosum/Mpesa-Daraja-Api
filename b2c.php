@@ -1,10 +1,11 @@
 <?php
 include 'accessToken.php';
+include 'securitycridential.php';
 
 $b2c_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v3/paymentrequest';
 
 $initiatorName = 'testapi';
-$securityCredential = 'kWX6HJmBjLnqO77cPuWnZ6e0Y9Uo0z';
+// $securityCredential = 'fyiA2Hbb/OocnyuK3b9IoK0YtH0OnEwlhMmxk6BeSkxjnBnwNFtRG626dn9Pk42zppcVCsns7sM1f+VeX5yylzLirUMQrtUZL7rRbck1GVFQ5dD4aEgVYzYvtBOdy2ZATWP1EIyW7287hM6qhExEPmLliZr7sqbbpWSCc6ffSXsvUHTv3CH8q5xwCgKWzl2OuJD1+dh5grg6wSOEiJUGrvYnK+0wecMUqrcCIZ1/Lxt6zx0vqYlIcB7BXtx9J8Yt5EO5+Sn8I93EpkvdbQ7bZdHKHOzOI71ddH/ucCcH+hWW2BOXabD0/9tSjiIDXdq8B54yocwD/bmNanSyPWl/Wg==';
 $commandID = 'SalaryPayment'; // SalaryPayment, BusinessPayment, PromotionPayment
 $amount = '10';
 $businessShortCode = '600983';
@@ -61,13 +62,14 @@ curl_close($curl);
 
 
 // include 'accessToken.php';
+//include 'securitycridential.php';
 // $b2c_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v3/paymentrequest';
 // $InitiatorName = 'testapi';
 // $pass = "Safaricom999!*!";
 // $BusinessShortCode = "600983";
 // $phone = "254708374149";
 // $amountsend = '1';
-// $SecurityCredential = 'kWX6HJmBjLnqO77cPuWnZ6e0Y9Uo0z';
+<!-- // $SecurityCredential = 'kWX6HJmBjLnqO77cPuWnZ6e0Y9Uo0z'; -->
 // $CommandID = 'SalaryPayment'; //SalaryPayment, BusinessPayment, PromotionPayment
 // $Amount = $amountsend;
 // $PartyA = $BusinessShortCode;

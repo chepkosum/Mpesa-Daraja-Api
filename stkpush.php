@@ -5,7 +5,7 @@ include 'accessToken.php';
 
 date_default_timezone_set('Africa/Nairobi');
 $processrequestUrl = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'https://6621-196-216-86-79.ngrok-free.app/darajaapi/callback.php';
+$callbackurl = 'https://ce96-196-216-86-73.ngrok-free.app/darajaapi/callback.php';
 $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
